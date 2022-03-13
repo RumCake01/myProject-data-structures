@@ -8,7 +8,7 @@ public class BigOExamplesSet1 {
         // Task 1 Single Loop...................
         long startTime=System.currentTimeMillis();
         int numberOfOperations=0;
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++){ // O(n)
             numberOfOperations++;
         } // n + n^2 + n^3 =23153 = 23142
         long endTime=System.currentTimeMillis();
@@ -18,7 +18,7 @@ public class BigOExamplesSet1 {
         // Task 2 Nested Loops...................
         startTime=System.currentTimeMillis();
         numberOfOperations=0;
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++){ // O(n^2)
             for(int j=0;j<n;j++)
                 numberOfOperations++;
         }
@@ -31,7 +31,7 @@ public class BigOExamplesSet1 {
         long numberOfOperations2= (long) 0.0;
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
-                for(int k=0;k<n;k++)
+                for(int k=0;k<n;k++) // O(n^3)
                     numberOfOperations2++;
             }
         }
@@ -43,7 +43,7 @@ public class BigOExamplesSet1 {
         startTime=System.currentTimeMillis();
         numberOfOperations=0;
         for(int i=0;i<n;i++){
-            for(int j=0;j<m;j++){
+            for(int j=0;j<m;j++){ // O(n*m)
                 numberOfOperations++;
             }
         }
@@ -55,7 +55,7 @@ public class BigOExamplesSet1 {
         // Task 5 Logarithmic Complexity...................
         startTime=System.currentTimeMillis();
         numberOfOperations=0;
-        for(int i=1;i<=n;i=i*2){
+        for(int i=1;i<=n;i=i*2){ // O(log n)
             numberOfOperations++;
         }
         endTime=System.currentTimeMillis();
