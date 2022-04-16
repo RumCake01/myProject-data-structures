@@ -88,13 +88,19 @@ public class MyTree {
         if(root==null) return false;
         Node current =root;
         while(current!=null){
-            if(value<current.value) // if it is less than the valuen then branch out left
+            if(value<current.value) // if it is less than the value then branch out left
                 current=current.leftChild;
             if(value>current.value) // if greater-> then branch out to the right child
                 current=current.rightChild;
             else return true;
         }
         return false;
+    }
+
+    // Task 2 Implement a method that true if the node is a Leaf in a BST
+    public boolean isItLeaf(Node node){
+        return node.leftChild==null && node.rightChild==null;
+
     }
 }
 

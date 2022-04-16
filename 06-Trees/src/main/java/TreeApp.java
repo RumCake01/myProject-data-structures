@@ -24,5 +24,7 @@ public class TreeApp {
         System.out.println();
         System.out.println("Contains method in BST");
         System.out.println(mytree.contains(100));
+
+
     }
 }
