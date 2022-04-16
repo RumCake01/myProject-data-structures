@@ -111,7 +111,14 @@ public class MyTree {
         printLeaves(root.leftChild);
         printLeaves(root.rightChild);
     }
+
+    // Task 4- Implement a method that counts leaves of a BST.
+    public int countOfLeaves(Node root){
+        if (root == null) return 0;
+        if (isItLeaf(root)) return 1;
+        return countOfLeaves(root.leftChild) + countOfLeaves(root.rightChild);
     }
+}
 
 
 

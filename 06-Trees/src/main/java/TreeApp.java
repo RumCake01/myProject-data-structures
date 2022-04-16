@@ -28,5 +28,9 @@ public class TreeApp {
         System.out.println();
         System.out.println("Print Leaves of The Tree");
         mytree.printLeaves(mytree.root);
+
+        System.out.println();
+        System.out.println("Print number of Leaves of The Tree is " + mytree.countOfLeaves(mytree.root));
+
     }
 }
