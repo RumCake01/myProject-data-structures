@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class MyTree {
     public Node root;
 
@@ -60,15 +63,25 @@ public class MyTree {
 
         }
 
-        // Breadth First logic
+        // Breadth First logic level order using Queue data structures.
 
-    public void breadthFirstOrder(Node root){
-        if (root == null) return;
-        System.out.println(root.value+", ");
-        breadthFirstOrder(root.leftChild);
+    public void breadthFirstTraversalOrder(Node root){
+
+        if(root==null) return;
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            Node toVisit= queue.poll();
+            System.out.print(toVisit.value+ ", ");
+
+            if(toVisit.leftChild!=null) queue.add(toVisit.leftChild);
+            if (toVisit.rightChild!=null) queue.add(toVisit.rightChild);
+        }
 
 
-    }
+
+    } // end levelOrder
 
 }
 

@@ -16,5 +16,8 @@ public class TreeApp {
         System.out.println();
         System.out.println("Post-Order Traversal");
         mytree.postOrderTraverse(mytree.root);
+        System.out.println();
+        System.out.println("Bread-first Traversal");
+        mytree.breadthFirstTraversalOrder(mytree.root);
     }
 }
