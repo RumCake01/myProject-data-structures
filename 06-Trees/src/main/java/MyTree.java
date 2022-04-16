@@ -127,6 +127,15 @@ public class MyTree {
         return findSumOfLeafValues(root.leftChild) + findSumOfLeafValues(root.rightChild);
     }
 
+    // Task 6 - Implement a method that returns height of a tree in a BST.
+
+    public int returnHeightOfATree(Node root){ // if we send the root -> then we find height of a tree
+        if (root == null) return -1; // if it is null return -1
+        if(isItLeaf(root)) return 0;
+        return 1+ Math.max(returnHeightOfATree(root.leftChild), returnHeightOfATree(root.rightChild));
+
+    }
+
 
 
 
