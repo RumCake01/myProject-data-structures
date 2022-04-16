@@ -78,11 +78,24 @@ public class MyTree {
             if(toVisit.leftChild!=null) queue.add(toVisit.leftChild);
             if (toVisit.rightChild!=null) queue.add(toVisit.rightChild);
         }
-
-
-
     } // end levelOrder
 
+
+    // how do we search in a BST?
+
+    // Implement contains method in an integer BST - > TASK 1
+    public boolean contains(int value){
+        if(root==null) return false;
+        Node current =root;
+        while(current!=null){
+            if(value<current.value) // if it is less than the valuen then branch out left
+                current=current.leftChild;
+            if(value>current.value) // if greater-> then branch out to the right child
+                current=current.rightChild;
+            else return true;
+        }
+        return false;
+    }
 }
 
 
