@@ -118,6 +118,19 @@ public class MyTree {
         if (isItLeaf(root)) return 1;
         return countOfLeaves(root.leftChild) + countOfLeaves(root.rightChild);
     }
+
+    // Task 5 - Implement a method that returns a sum of leaf values of a BST.
+
+    public int findSumOfLeafValues(Node root){
+        if (root == null) return 0;
+        if (isItLeaf(root)) return root.value;
+        return findSumOfLeafValues(root.leftChild) + findSumOfLeafValues(root.rightChild);
+    }
+
+
+
+
+
 }
 
 
