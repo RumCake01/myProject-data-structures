@@ -1,3 +1,5 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 public class TreeApp {
     public static void main(String[] args) {
 
@@ -19,5 +21,8 @@ public class TreeApp {
         System.out.println();
         System.out.println("Bread-first Traversal");
         mytree.breadthFirstTraversalOrder(mytree.root);
+        System.out.println();
+        System.out.println("Contains method in BST");
+        System.out.println(mytree.contains(100));
     }
 }
